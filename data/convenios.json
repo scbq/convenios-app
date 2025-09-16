@@ -1,0 +1,71 @@
+[
+  {
+    "id": "conv-um-001",
+    "slug": "convenio-universidad-mayor-analitica",
+    "titulo": "Universidad Mayor — Analítica Avanzada",
+    "institucion": "Universidad Mayor",
+    "area": ["Educación", "Data & IA"],
+    "fechaInicio": "2025-03-01",
+    "fechaTermino": "2026-03-01",
+    "region": "Metropolitana",
+    "modalidad": "Mixto",
+    "estado": "Vigente",
+    "beneficios": ["20% descuento en diplomados", "Seminarios exclusivos"],
+    "requisitos": ["Funcionario activo", "Acreditar vínculo"],
+    "publicoObjetivo": "Funcionarios y cargas",
+    "contacto": {
+      "correo": "convenios@umayor.cl",
+      "telefono": "+56 2 2345 6789"
+    },
+    "enlaceOficial": "https://ejemplo.umayor.cl/convenio",
+    "pdf": null,
+    "tags": ["descuento", "posgrado", "analítica"],
+    "resumen": "Descuentos en programas de analítica e IA."
+  },
+  {
+    "id": "conv-salud-002",
+    "slug": "convenio-clinica-central-salud",
+    "titulo": "Clínica Central — Beneficios de Salud",
+    "institucion": "Clínica Central",
+    "area": ["Salud"],
+    "fechaInicio": "2024-10-01",
+    "fechaTermino": "2025-10-15",
+    "region": "Metropolitana",
+    "modalidad": "Presencial",
+    "estado": "Proximo",
+    "beneficios": ["Chequeos preventivos con copago reducido"],
+    "requisitos": ["Credencial institucional vigente"],
+    "publicoObjetivo": "Funcionarios",
+    "contacto": {
+      "correo": "beneficios@clinicacentral.cl",
+      "telefono": "+56 2 2987 6543"
+    },
+    "enlaceOficial": "https://clinicacentral.cl/convenios",
+    "pdf": null,
+    "tags": ["salud", "preventivo"],
+    "resumen": "Copagos preferentes en exámenes y consultas."
+  },
+  {
+    "id": "conv-ti-003",
+    "slug": "convenio-proveedor-ti-software",
+    "titulo": "SoftEdu — Licencias Software Educativas",
+    "institucion": "SoftEdu Ltda.",
+    "area": ["Tecnología", "Educación"],
+    "fechaInicio": "2023-05-01",
+    "fechaTermino": "2024-05-01",
+    "region": "Valparaíso",
+    "modalidad": "Remoto",
+    "estado": "Vencido",
+    "beneficios": ["Licencias con 30% de descuento"],
+    "requisitos": ["Correo corporativo"],
+    "publicoObjetivo": "Funcionarios y practicantes",
+    "contacto": {
+      "correo": "ventas@softedu.cl",
+      "telefono": "+56 32 223 4455"
+    },
+    "enlaceOficial": "https://softedu.cl/convenios",
+    "pdf": "/docs/softedu-condiciones.pdf",
+    "tags": ["software", "licencias"],
+    "resumen": "Descuentos en licencias de software académico."
+  }
+]
