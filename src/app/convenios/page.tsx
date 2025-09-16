@@ -1,8 +1,8 @@
-import data from "../../data/convenios.json";
-import ConvenioCard from "../../components/ConvenioCard";
-import FilterBar from "../../components/FilterBar";
-import { normalizarEstado } from "../../lib/utils";
-import type { Convenio } from "../../types/convenio";
+import data from "../../../data/convenios.json";
+import ConvenioCard from "../../../components/ConvenioCard";
+import FilterBar from "../../../components/FilterBar";
+import { normalizarEstado } from "../../../lib/utils";
+import type { Convenio } from "../../../types/convenio";
 
 function uniq<T>(arr: T[]) { return Array.from(new Set(arr)); }
 

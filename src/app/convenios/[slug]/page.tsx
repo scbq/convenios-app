@@ -1,8 +1,8 @@
-import data from "../../../data/convenios.json";
-import BadgeEstado from "../../../components/BadgeEstado";
-import { normalizarEstado } from "../../../lib/utils";
+import data from "../../../../data/convenios.json";
+import BadgeEstado from "../../../../components/BadgeEstado";
+import { normalizarEstado } from "../../../../lib/utils";
 import { notFound } from "next/navigation";
-import type { Convenio } from "../../../types/convenio";
+import type { Convenio } from "../../../../types/convenio";
 
 export default function ConvenioDetail({ params }: { params: { slug: string } }) {
   const convenios = data as unknown as Convenio[];
