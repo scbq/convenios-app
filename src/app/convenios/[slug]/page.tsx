@@ -1,15 +1,12 @@
 import data from "../../../../data/convenios.json";
-import BadgeEstado from "../../../../components/BadgeEstado";
-import { normalizarEstado } from "../../../../lib/utils";
 import { notFound } from "next/navigation";
 import type { Convenio } from "../../../../types/convenio";
+import FavoriteButton from "../../../components/FavoriteButton";
 
 export default function ConvenioDetail({ params }: { params: { slug: string } }) {
   const convenios = data as unknown as Convenio[];
   const convenio = convenios.find(c => c.slug === params.slug);
   if (!convenio) return notFound();
-
-  const estado = normalizarEstado(convenio.estado, convenio.fechaTermino);
 
   return (
     <article className="space-y-4">
@@ -18,7 +15,9 @@ export default function ConvenioDetail({ params }: { params: { slug: string } })
           <h2 className="text-2xl font-semibold">{convenio.titulo}</h2>
           <p className="text-gray-600">{convenio.institucion}</p>
         </div>
-        <BadgeEstado estado={estado} />
+        <div className="flex items-center gap-2">
+          <FavoriteButton id={convenio.id} size="md" />
+        </div>
       </div>
 
       {convenio.resumen && <p className="text-sm">{convenio.resumen}</p>}
@@ -57,14 +56,6 @@ export default function ConvenioDetail({ params }: { params: { slug: string } })
           {convenio.requisitos.map((r, i) => <li key={i}>{r}</li>)}
         </ul>
       </div>
-
-      {convenio.tags?.length ? (
-        <div className="flex flex-wrap gap-2">
-          {convenio.tags.map(t => (
-            <span key={t} className="text-xs bg-gray-100 px-2 py-1 rounded-full">{t}</span>
-          ))}
-        </div>
-      ) : null}
     </article>
   );
 }
