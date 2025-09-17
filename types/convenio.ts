@@ -8,7 +8,6 @@ export type Convenio = {
   fechaTermino: string;
   region: string;
   modalidad: "Presencial" | "Remoto" | "Mixto" | string;
-  estado?: "Vigente" | "Proximo" | "Vencido" | string;
   beneficios: string[];
   requisitos: string[];
   publicoObjetivo: string;
@@ -17,4 +16,8 @@ export type Convenio = {
   pdf?: string | null;
   tags?: string[];
   resumen?: string;
+
+  // NUEVO
+  image?: string; // ej. "/convenios/umayor.jpg" (desde /public)
+  logo?: string;  // opcional, si quieres mostrar logo pequeño de la institución
 };

@@ -9,7 +9,6 @@
     "fechaTermino": "2026-03-01",
     "region": "Metropolitana",
     "modalidad": "Mixto",
-    "estado": "Vigente",
     "beneficios": ["20% descuento en diplomados", "Seminarios exclusivos"],
     "requisitos": ["Funcionario activo", "Acreditar vínculo"],
     "publicoObjetivo": "Funcionarios y cargas",
@@ -20,7 +19,8 @@
     "enlaceOficial": "https://ejemplo.umayor.cl/convenio",
     "pdf": null,
     "tags": ["descuento", "posgrado", "analítica"],
-    "resumen": "Descuentos en programas de analítica e IA."
+    "resumen": "Descuentos en programas de analítica e IA.",
+    "image": "/convenios/umayor.jpeg"
   },
   {
     "id": "conv-salud-002",
@@ -32,7 +32,6 @@
     "fechaTermino": "2025-10-15",
     "region": "Metropolitana",
     "modalidad": "Presencial",
-    "estado": "Proximo",
     "beneficios": ["Chequeos preventivos con copago reducido"],
     "requisitos": ["Credencial institucional vigente"],
     "publicoObjetivo": "Funcionarios",
@@ -43,7 +42,8 @@
     "enlaceOficial": "https://clinicacentral.cl/convenios",
     "pdf": null,
     "tags": ["salud", "preventivo"],
-    "resumen": "Copagos preferentes en exámenes y consultas."
+    "resumen": "Copagos preferentes en exámenes y consultas.",
+    "image": "/convenios/clinica-central.jpeg"
   },
   {
     "id": "conv-ti-003",
@@ -55,7 +55,6 @@
     "fechaTermino": "2024-05-01",
     "region": "Valparaíso",
     "modalidad": "Remoto",
-    "estado": "Vencido",
     "beneficios": ["Licencias con 30% de descuento"],
     "requisitos": ["Correo corporativo"],
     "publicoObjetivo": "Funcionarios y practicantes",
@@ -66,6 +65,7 @@
     "enlaceOficial": "https://softedu.cl/convenios",
     "pdf": "/docs/softedu-condiciones.pdf",
     "tags": ["software", "licencias"],
-    "resumen": "Descuentos en licencias de software académico."
+    "resumen": "Descuentos en licencias de software académico.",
+    "image": "/convenios/softedu.jpeg"
   }
 ]
