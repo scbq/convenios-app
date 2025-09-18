@@ -1,29 +1,36 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HeroHeader() {
   const [open, setOpen] = useState(false);
 
-  // Cierra con ESC
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
+  const logoSrc = "/convenios/DIRPLAN.png"; // archivo dentro de /public
+
   return (
     <div className="relative isolate overflow-hidden bg-gray-900">
       {/* HEADER ABSOLUTO SOBRE EL HERO */}
       <header className="absolute inset-x-0 top-0 z-50">
         <nav aria-label="Global" className="mx-auto max-w-6xl flex items-center justify-between p-6 lg:px-8">
+          {/* Brand */}
           <div className="flex lg:flex-1">
-            <Link href="/" className="-m-1.5 p-1.5 inline-flex items-center gap-2">
-              <span className="sr-only">felipe Institucionales</span>
-              <span className="inline-flex size-20 items-center justify-center rounded-full bg-white text-white font-semibold">
-                <img src="../../public/convenios/DIRPLAN.png" alt="logo" className="size-20 rounded-full" />
+            <Link href="/" className="-m-1.5 p-1.5 inline-flex items-center">
+              <span className="relative shrink-0 h-16 w-56 sm:h-16 sm:w-60 lg:h-20 lg:w-72 overflow-hidden">
+                <Image
+                  src={logoSrc}
+                  alt="DIRPLAN"
+                  fill
+                  className="object-contain"
+                  priority
+                />
               </span>
-              
             </Link>
           </div>
 
@@ -44,8 +51,8 @@ export default function HeroHeader() {
 
           {/* Desktop nav */}
           <div className="hidden lg:flex lg:gap-x-12">
-            <Link href="/" className="text-sm font-semibold text-white">Catálogo</Link>
-            <Link href="/convenios?favoritos=1" className="text-sm font-semibold text-white">Favoritos</Link>
+            <Link href="/" className="text-sm font-semibold text-white hover:text-indigo-300">Catálogo</Link>
+            <Link href="/convenios?favoritos=1" className="text-sm font-semibold text-white hover:text-indigo-300">Favoritos</Link>
           </div>
           <div className="hidden lg:flex lg:flex-1 lg:justify-end" />
         </nav>
@@ -56,9 +63,19 @@ export default function HeroHeader() {
             <div className="absolute inset-0 bg-black/50" onClick={() => setOpen(false)} />
             <div className="fixed inset-y-0 right-0 w-full sm:max-w-sm bg-gray-900 p-6 ring-1 ring-white/10">
               <div className="flex items-center justify-between">
-                <Link href="/" className="-m-1.5 p-1.5 inline-flex items-center gap-2" onClick={() => setOpen(false)}>
-                  <span className="inline-flex size-8 items-center justify-center rounded-full bg-indigo-500 text-white font-semibold">C</span>
-                  <span className="sr-only">Convenios Institucionales</span>
+                <Link
+                  href="/"
+                  className="-m-1.5 p-1.5 inline-flex items-center"
+                  onClick={() => setOpen(false)}
+                >
+                  <span className="relative shrink-0 h-10 w-40 overflow-hidden">
+                    <Image
+                      src={logoSrc}
+                      alt="DIRPLAN"
+                      fill
+                      className="object-contain"
+                    />
+                  </span>
                 </Link>
                 <button
                   type="button"
@@ -99,10 +116,10 @@ export default function HeroHeader() {
       <div className="mx-auto max-w-2xl py-28 sm:py-44 lg:py-52">
         <div className="text-center">
           <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight text-white">
-            Convenios para tu comunidad
+            Convenios Institucionales
           </h1>
           <p className="mt-6 text-lg sm:text-xl text-gray-300">
-            Explora convenios institucionales por áreas e instituciones. Guarda tus favoritos y mantén a mano sus beneficios.
+            Explora nuestros convenios por áreas e instituciones.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a href="#catalogo" className="rounded-md bg-indigo-500 px-4 py-2.5 text-sm font-semibold text-white shadow hover:bg-indigo-400">
